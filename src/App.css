@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.floating-label {
+    position: relative;
+}
+.floating-label input:focus ~ label,
+.floating-label input:not(:placeholder-shown) ~ label {
+    transform: translateY(-1.7rem) scale(0.75);
+    opacity: 1;
+}
+.floating-label label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+    padding: 0 0.25rem;
+    opacity: 0.7;
+}
+.floating-label input {
+    border: none;
+    border-bottom: 1px solid rgb(165, 163, 163);
+}
+.floating-label input:focus {
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+footer{
+    margin-top:10%;
+}
